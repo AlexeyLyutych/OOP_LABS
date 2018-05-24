@@ -1,0 +1,47 @@
+﻿<Window x:Class="Zoo.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Zoo"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="350" Width="525"
+        Style="{DynamicResource Meow}"
+        >
+    <Window.Resources>
+        <Style TargetType="Window" x:Key="Meow" >
+            <Setter Property="Background" Value="LightBlue"></Setter>
+            
+        </Style>
+    </Window.Resources>
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="3*"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+
+        <Image Source="E:\Универ\2 курс 2 сем\ООП\Курсовой\emp1.png" Grid.Column="0" Stretch="Fill"  ></Image>
+        <Image Source="E:\Универ\2 курс 2 сем\ООП\Курсовой\koala.png" Grid.Column="1" Stretch="Fill" ></Image>
+        <Image Source="E:\Универ\2 курс 2 сем\ООП\Курсовой\provider1.png" Grid.Column="2" Stretch="Fill" ></Image>
+        <Button FontFamily="Comic Sans MS" FontSize="16"  Grid.Row="1" Grid.Column="0" Content="Сотрудники" x:Name="Employees_btn" Click="Associate_btn_Click" BorderThickness="2" BorderBrush="Black"  Background="LightSteelBlue"></Button>
+        <Button FontFamily="Comic Sans MS" FontSize="16"  Grid.Row="1" Grid.Column="1" Content="Животные" x:Name="Animals_btn" Click="Animals_btn_Click" BorderThickness="2" BorderBrush="Black"  Background="LightSteelBlue">
+        </Button>
+        <Button FontFamily="Comic Sans MS" FontSize="16" Grid.Row="1" Grid.Column="2" Content="Поставщики" x:Name="providers_btn" Click="providers_btn_Click" 
+               Background="LightSteelBlue" BorderThickness="2" BorderBrush="Black" >
+           </Button>
+        <GridSplitter Grid.Row="0" Grid.Column="1"  Width="2" Background="Black"
+                      VerticalAlignment="Stretch" ></GridSplitter>
+        <GridSplitter Grid.Row="0" Grid.Column="0"  Width="2" Background="Black"
+                      VerticalAlignment="Stretch" ></GridSplitter>
+        <GridSplitter Grid.Row="0" Grid.Column="1"  Width="2" Background="Black"
+                      VerticalAlignment="Stretch" HorizontalAlignment="Left" ></GridSplitter>
+        <GridSplitter Grid.Row="0" Grid.Column="2"  Width="2" Background="Black"
+                      VerticalAlignment="Stretch" HorizontalAlignment="Left" ></GridSplitter>
+    </Grid>
+</Window>
